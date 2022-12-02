@@ -3,7 +3,7 @@
 
 > + **_Versión_**: 2022-2023
 > + **_Asignatura_** : SIG II (Máster GEOFOREST). 
-> + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
+> + **_Autor_**: Cristina (fjbonet@uco.es)
 > + **_Duración_**: 3,5 horas.
 
 
