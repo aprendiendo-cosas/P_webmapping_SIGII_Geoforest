@@ -1,11 +1,10 @@
-# Instrucciones para realizar la práctica denominada "Cuantificación y representación espacial de la diversidad biológica"
+# Instrucciones para realizar la práctica denominada "Guión de la práctica: Aplicción de WebMapping para la gestión de datos espaciales abientales y forestales"
 
 
 > + **_Versión_**: 2022-2023
 > + **_Asignatura_** : SIG II (Máster GEOFOREST). 
-> + **_Autor_**: Cristina (fjbonet@uco.es)
+> + **_Autor_**: Cristina (cristina.acosta@uco.es)
 > + **_Duración_**: 3,5 horas.
-
 
 
 
@@ -21,21 +20,22 @@
 
 Esta práctica tiene los siguientes objetivos:
 + Disciplinares:
-  + Reconocer el concepto de biodiversidad ya estudiado en en otras ocasiones.
-  + Aprender un método para cuantificar la diversidad biológica. Índice de Shannon.
-  + Aprender a generar mapas de diversidad biológica. Mapas de distribución del índice de Shannon.
-  + Reconocer patrones de distribución de la diversidad en un territorio concreto.
-  + Identificar las causas de los patrones anteriores.
-  + Reconocer cómo la diversidad biológica cambia su significado al hacerlo la escala espacial. 
+  + Aprender qué es un WebMapping
+  + Conocer los fundamentos de los WebMapping
   
 + Instrumentales:
 
-  + Afianzar nuestro conocimiento de SIG.
-  + Mejorar nuestro conocimiento de R.
-  + Poner en práctica algunos conceptos ya conocidos de las bases de datos relacionales. 
-  + Entrenar la habilidad de transferir conocimientos de un ámbito (territorial en este caso) a otro.
+  + Aprender a utilizar una aplicación de cartografía Web que permita interpretar el análisis de información ambiental y forestal de una zona determinada.
+  + Aprender y conocer el proceso de publicación de datos geoespaciales a través de servidores web.
   
-   
+## Instrucciones
+
++ Lea atentamente toda la guía.
++ Verifique que cuenta con los elementos de hardware, software, red e inputs necesarios.
++ Identifique y complete la información que se le solicita.
++ Asegúrese de descargar la información necesaria para el desarrollo de esta prácitca.
++ Utilice el material como se lo indica el profesor
++ Al finalizar el ejercicio participe en la socialización de las diferentes respuestas expuestas.   
 
 
 ## Contextualización ecológica y estructura de la sesión
