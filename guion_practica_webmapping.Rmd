@@ -1,0 +1,246 @@
+---
+title: 'Guión de la práctica: Aplicción de WebMapping para la gestión
+  de datos espaciales abientales y forestales'
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    toc_loc: left
+    toc_float: yes
+    toc-depth: 2
+    code_folding: show
+    theme: cerulean
+---
+
+> -   ***Versión***: v.2022-2023
+> -   ***Asignatura (titulación)***: Sistemas de Información Geográfica y Ecología Espacial (Máster GEOFOREST)
+> -   ***Autores***: Cristina Acosta Muñoz ([cristina.acosta\@uco.es](mailto:cristina.acosta@uco.es){.email})
+> -   ***Duración***: 3 horas.
+
+#### Objetivo:
+
+1) Aprender a utilizar una aplicación de cartografía Web que permita interpretar el análisis de información ambiental y forestal de una zona determinada.
+2) Aprender y conocer el proceso de publicación de datos geoespaciales a través de servidores web.
+
+#### Instrucciones para la Práctica:
+
+a)  Lea atentamente toda la guía.\
+b)  Verifique que cuenta con los elementos de hardware, software, red e inputs necesarios.
+c)  Identifique y complete la información que se le solicita.
+d)  Asegúrese de descargar la información necesaria para el desarrollo de esta prácitca.
+e)  Utilice el material como se lo indica el profesor
+f)  Al finalizar el ejercicio participe en la socialización de las diferentes respuestas expuestas.
+
+#### Materiales:
+
+| DESCRIPCIÓN               | NOMBRE Y LOCALIZACION                       |
+|---------------------------------|---------------------------------------|
+| Guión de la práctica      | UDII_P_GUIA_WEBMAPPING.pdf / Moodle         |
+| Datos suministrados       | Data_mapping.rar / Moodle                   |
+| Datos disponibles On-Line | Varios / Revisar Material suplementario     |
+
+------------------------------------------------------------------------
+
+#### Entrega: 
+
+Esta práctica NO tiene ningún entregable por parte del estudiante, solo se desarrollará durante el tiempo de clase para que el estudiante pueda aprender y afianzar conocimientos.  
+
+------------------------------------------------------------------------
+
+### Introducción: Publicar mapas en la web
+<a name="inicio"></a>
+Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
+rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
+existen algunas herramientas que podemos usar para hacer mapas interactivos de una manera fácil.
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/Elementos_pinar.jpg?raw=true" alt="Figura 1" style="zoom:30%;"/><a name="figura1"></a><br><br> **Figura 1**
+</p>
+
+¿Qué es qgis2web?
+qgis2web es una herramienta que exporta proyectos QGIS a mapas web OpenLayers o Leaflet (crea automáticamente los archivos HTML, Javascript y CSS).El origen de este complemento está en los complementos qgis2leaf 
+existentes, desarrollados por Tom Chadwin, Riccardo Klinger, Victor Olaya, Nyall Dawson (https://github.com/tomchadwin/qgis2web/wiki).
+¿Cómo funciona qgis2web?
+qgis2web crea un mapa web basado en OpenLayers o Leaflet de todas las capas existentes en un proyecto QGIS. La herramienta convierte capas vectoriales a GeoJSON y crea una estructura de carpetas con un archivo 
+index.html que contiene el mapa web. El complemento también puede exportar la simbología definida por QGIS de puntos, líneas y polígonos e incluye un control de visibilidad de capa y varios otros controles.
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/cargar_csv.jpg?raw=true" alt="Figura 2" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 2**
+</p>
+
+
+En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia
+y funcionalidades del mapa para mostrar capas de diferentes formatos (pueden ser: KMZ, geojson, shp, CAD, WMS). 
+Para realizar este tipo de mapas interactivos existen diferentes aplicaciones online donde podemos ir codificando y visualizando al mismo tiempo, sin necesidad de tener el mapa guardado localmente. Las Aplication Programming interface 
+
+## Datos de entrada en esta práctica:
+- Capas utilizadas y generadas en las prácticas anteriores de esta misma asignatura. 
+
+## Software para el desarrollo de esta práctica:
+- QGIS.
+
+### Desarrollo de la práctica:
+## Instalación del complemento QGIS2WEB 
+1. Abra un nuevo proyecto de QGIS
+2. Vaya a la barra de menú  superior y haga click en: COMPLEMENTOS --> ADMINISTRAR E INSTALAR COMPLEMENTOS...
+IMAG
+3. En la ventana de diálogo busque: "QGIS2WEB".  Seleciónelo y haga click en "INSTALAR COMPLEMENTO".
+IMAG
+
+## Crear una aplicación de WebMapping
+4. Prepara en tu visior todas las capas que utilizarás, estableciendo la simbología y diseño de apariencia para las mismas. 
+5. Cuando el mapa esté listo, entonces es hora de abrir la aplicación de mapas web utilizando el complemento QGIS2WEB. Para ello, inicie la herramienta QGIS2WEB, en una de las siguientes opciones que se muestran:
+IMAG
+6. En la ventana de diálogo es posible establecer algunos parámetros para para la muestra web de información cargada en QGIS. 
+IMAG
+7. Para ver el diseño y modificaciones de las distintas opciones, presione el botón "UPDATE PREVIEW". Recuerde que cada vez que modifique o configure un parámetro, debe hacer click en este botón para ver el resultado. 
+8. Entre las pestañas, hay una exclusiva para la exportación 
+
+### [Cargar capas en QGIS:]{.underline}
+
+-   Capa de límites del monte:
+    -   No podemos partir del KML utilizado para descargar el MDT del PNOA porque lo guardamos en un SRC de coordenadas geográficas (WGS86). Hay que descargar y cortar los límites del monte según indica la Presentación 2 y a continuación epxortarlos del siguiente modo:
+        -   Seleccionar la entidad correspondiente en la tabla de atributos
+        -   En el menú "Edición", copiar objetos seleccionados y pegar como nueva capa vectorial
+        -   Guardar los límites de la propiedad en formato SHP. Comprobar el SRC.
+    -   La capa de limites contiene dos geometrías, pero solo necesitamos la correspondiente al Tramo II (la grande situada al sur) [(Fig. 1)](#figura1). Eliminaremos la geometría superior con la herramienta "Borrar parte" del menú "edición", activando antes la edición de la capa.
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/Elementos_pinar.jpg?raw=true" alt="Figura 1" style="zoom:30%;"/><a name="figura1"></a><br><br> **Figura 1**
+</p>
+
+-   Capa de puntos de presnecia de pinsapo
+    -   Cargar el CSV con el Administrador de Fuentes de Datos [(Fig. 2)](#figura2)
+    -   Exportar el archivo
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/cargar_csv.jpg?raw=true" alt="Figura 2" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 2**
+</p>
+
+-   Recorte de capas de información por los límites de la zona de estudio:
+    -   <u>Modelo digital de elevaciones:</u> Cortar con la herramienta de GDAL, "cortar raster por capa de máscara", del cajón de herramientas de procesos, utilizando las siguientes opciones [(Fig. 3)](#figura3):
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/recorte_MDT.jpg?raw=true" alt="Figura 3" style="zoom:90%;"/><a name="figura3"></a><br><br> **Figura 3**
+</p>
+
+Si el proceso da error, habrá que comprobar la geometría de los límites del terreno. La opción más probable es que haya una intersección entre algunos puntos del contorno
+
+-   <u>Capa de vías:</u>
+    -   Añadir desde la carpeta descargada del DERA (IECA) tantas capas como sean necesarias (las que tengan presencia en el interior de los limites del monte) al proyecto de QGis
+    -   Preseleccionar los elementos de una de las dos capa de forma manual, con la herramienta "Seleccionar por localización": Menú "Vectorial"\>"Herramientas de Investigación", utilizando la capa de los límites del monte. Copiar la selección y pegarla como nueva capa vectorial temporal (herramientas del menú "Edición")
+    -   Repetir el proceso con la segunda capa, pero en lugar de pegar las geometrías en una nueva capa vectorial, realizar el pegado en la capa vectorial temporal creada anteriormente.
+    -   Recortar con la herramienta de GDAL "Cortar vectorial por capa de máscara"
+-   <u>Capa de puntos de inventario y de presencia de *Heterobasidium*</u>:
+    -   Estas capas se recortarán cuando las tengamos en formato Raster, tras el cálculo del raster de distancias y la interpolación, siguiendo el mismo procedimiento que para el recorte del MDE [(Fig. 3)](#figura3).
+
+### [Preparación del entorno:]{.underline}
+
+En este paso vamos a manipular y preparar las capas de información vectorial necesarias para crear posteriormente los archivos raster que usaremos en la segmentación.
+
+-   <u>Capa de cauces</u>:
+    -   De entre las capas vectoriales de hidrología descargadas del IECA, deberíamos cargar en nuestro proyecto las capas correspondientes a cursos de agua (*03_01_Rio.shp*).
+    -   Después utilizaremos la herramienta *Cortar vectorial por capa de máscara* para quedarnos unicamente con los cauces que pasen por nuestra zona de trabajo
+-   En nuestro caso, vamos a necesitar los cauces secundarios y los canales de drenaje, pues serán áreas hidrológicamente favorables para el pinsapo por la humedad. Esta capa la debemos obtener a partir del MDT, por lo que si no encontramos otros cursos de agua artificiales, utilizaremos solo la capa de canales extraida del siguiente modo:<br>
+    -   Realizar un *recorte por extensión* del MDT para la zona de trabajo. EL recorte por capa de máscara nos daría error debido al hueco del raster que se produce en el contorno.
+    -   Utilizando la herramienta de SAGA *Red de canales y cuencas de drenaje* [(Fig. 4)](#figura4), extraemos los canales con los parámetros por defecto.
+    -   Recortamos los canales al área de trabajo a través de la herramienta *Cortar vectorial por capa de máscara*
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/red_canales.jpg?raw=true" alt="Figura 4" style="zoom:90%;"/><a name="figura4"></a><br><br> **Figura 4**
+</p>
+
+Tras establecer el SRC adecuado y hacer la capa permanete (guardarla en el disco duro), realizaremos un recorte de la capa quedándonos únicamente con las entidades y partes de entidades que se encuentren dentro de los límites de la zona de trabajo, a través de la herramienta de GDAL *Cortar vectorial por capa de máscara*.
+
+Finalmente añadiremos mediante la calculadora de campos, un campo o columna en la tabla de atributos que denominaremos CAUCE y cuyo valor será 1 para todas las entidades. Este campo lo utilizaremos después para la rasterización.
+
+-   <u>Capa de caminos</u>:
+    -   Añadiremos al proyecto todas las capas de la carpeta \*Transportes y comunicaciones" que nos descargamos del DERA (IECA).
+    -   A continuación recortaremos las capas vectoriales una a una, utilizando los límites de la zona de trabajo-
+    -   Finalmente uniremos las diferentes capas resultantes seleccionando las entidades y utilizando las opciones *copiar* y *pegar* del menú edición.
+    -   También le añadiremos con la calculadora de campos un campo llamado CAMINOS que utilizaremos para el rasterizado posterior.
+-   <u> Capa de focos de *Heterobasidium*</u>:
+    -   En esta capa unicamente tenemos que añadir el atributo FOCOS mediante la calculadora de campos, para luego usarlo en la rasterización. Le daremos el valor 1.
+
+### [Preparación de capas raster:]{.underline}
+
+A continuación vamos a crear y preparar los raster que posteriormente utilizaremos para generar el raster virtual. Todos los raster deben tener la misma resolución, que será de 10 x 10 m.
+
+#### Capas raster de distancias a elementos
+
+-   <u>Raster de proximidad a zonas de drenaje</u>:
+    -   En primer lugar rasterizaremos la capa vectorial de canales de drenaje, mediante la herramienta *Raster -\> conversión -\> rasterizar*, utilizando el campo CAUCE [(Figura 5,a)](#figura5).
+    -   Posteriormente, calcularemos el raster de proximidad con la herramienta de GDAL [(Figura 5,b)](#figura5). Atención: No usar *Proximity buffer* pues el proceso es demasiado lento y bloqueará el equipo.
+    -   Indicamos el SRC de la capa y recortamos el resultado por los límites de la zona de trabajo.
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/Figura5.jpg?raw=true" alt="Figura 5" style="zoom:90%;"/><a name="figura5"></a><br><br> **Figura 5**
+</p>
+
+-   <u>Raster de proximidad a caminos</u>:
+
+-   Repetir los pasos realizados para el raster de proximidad a zonas de drenaje, con el archivo vectorial de caminos y senderos.
+
+-   Usaremos el atributo CAMINOS para la rasterización.
+
+-   <u>Raster de distancia a focos de *Heterobasidium*</u>:
+
+    -   Repetir los pasos realizados anteriormente, con el archivo vectorial de focos de *Heterobasidium.*
+    -   Usaremos el atributo FOCOS para la rasterización.
+
+> ~*Nota*:\ Si\ en\ alguna\ ocasión\ la\ herramienta\ de\ rasterización\ por\ defecto\ falla,\n probar\ con\ la\ herramienta\ *Feature\ to\ raster*\ de\ SAGA.~
+
+#### Capas raster de variables distribuidas
+
+-   <u>Raster de relieve (exposición)</u>:
+    -   Utilizaremos el MDT recortado para calcular la exposición mediante la herramienta *Raster -\> Analisis -\> aspecto*.
+
+-   <u>Raster de presencia (densidad) de pinsapo</u>:
+    -   Para realizar el raster de densidad de pinsapo utilizarermos la interpolación inversa a la distancia (IWD) de GDAL, con las opciones que se observan en la [Figura 6](#figura6).
+    -   Después cortaremos el raster por capa de máscara utilizando los límites del área de trabajo.
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/IWD_options.jpg?raw=true" alt="Figura 6" style="zoom:90%;"/><a name="figura6"></a><br><br> **Figura 6**
+</p>
+
+-   Finalmente reclasificaremos el raster utilizando la herramienta *r.reclass* de GRASS [(Figura 6)](#figura6), con las siguientes reglas de reclasificación:
+
+|    INTERVALO     | NUEVO VALOR |
+|:----------------:|:-----------:|
+|  0 thru 49.999   |      0      |
+| 50 thru 199.999  |     100     |
+| 200 thru 399.999 |     300     |
+| 400 thru 599.999 |     500     |
+| 600 thru 799.999 |     700     |
+|  800 thru 1000   |     900     |
+
+### [Raster virtual:]{.underline}
+
+En el siguiente paso uniremos los raster en un raster virtual utilizando la herramienta disponible en el menú *Raster -> miscelanea -> construir raster virtual* [(Figura 79](#figura7) .
+
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/raster_virtual.jpg?raw=true" alt="Figura 7" style="zoom:90%;"/><a name="figura7"></a><br><br> **Figura 7**
+</p>
+
+### [Segmentación:]{.underline}
+
+El último paso de la práctica consiste en realizar la segmemtación con la herramienta de Orfeo, localizada en l aventana de herramientas, en el desblegable *OTB -> Segmentation -> Segmentation*. Utilizaremos un radio espacial de 10 m (el tamaño del pixel) y un numero de pixeles mínimo de 1000 para no tener segmentos demasiado pequeños [(Figura 8)](#figura8):
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/orfeo.jpg?raw=true" alt="Figura 8" style="zoom:90%;"/><a name="figura8"></a><br><br> **Figura 8**
+</p>
+
+Se recomienda a los alumnos probar a realizar diferentes raster virtuales cambiando las capas de entrada y comprobar la diferencia entre los resultados.
+
+## Resultado de la práctica
+
+El resultado que obtendremos de la segmentación hay que transformarlo en capa vectorial para visualizarlo correctamente y comprobar las unidades sobre el terreno.
+
+<p align="center">
+<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/resultado_v.jpg?raw=true" alt="Figura 9" style="zoom:90%;"/><a name="figura9"></a><br><br> **Figura 9**
+</p>
+
+Como se puede observar en la [Figura 9](#figura9), la delimitación de los cantones presenta unos bordes irregulares, pero las estructuras tienen una buena correspondencia con la distribución y las diferencias de la masa, así como con las diferencias en la exposición de las laderas, o la densidad de pinsapo. A partir de esta segmentación, un técnico podría refinar las unidades, dándole a la división inventarial del monte un sentido más ecológico, en el que las unidades de gestión se definan en mayor medida por las características ecológicas de la zona respecto al pinsapo.
+
+
+[VOLVER](#inicio)
