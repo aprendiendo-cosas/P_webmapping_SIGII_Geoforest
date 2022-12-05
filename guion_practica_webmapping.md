@@ -8,7 +8,7 @@
 
 
 
-## Objetivos
+### Objetivos
 
 Esta práctica tiene los siguientes objetivos:
 + Disciplinares:
@@ -20,7 +20,7 @@ Esta práctica tiene los siguientes objetivos:
   + Aprender a utilizar una aplicación de cartografía Web que permita interpretar el análisis de información ambiental y forestal de una zona determinada.
   + Aprender y conocer el proceso de publicación de datos geoespaciales a través de servidores web.
   
-## Instrucciones para la práctica
+### Instrucciones para la práctica
 
 + Lea atentamente toda la guía.
 + Verifique que cuenta con los elementos de hardware, software, red e inputs necesarios.
@@ -29,7 +29,7 @@ Esta práctica tiene los siguientes objetivos:
 + Utilice el material como se lo indica el profesor
 + Al finalizar el ejercicio participe en la socialización de las diferentes respuestas expuestas.   
 
-#### Materiales facilitados para la realización de la práctica:
+### Materiales facilitados para la realización de la práctica:
 
 | DESCRIPCIÓN               | NOMBRE Y LOCALIZACION                       |
 |---------------------------------|---------------------------------------|
@@ -39,7 +39,13 @@ Esta práctica tiene los siguientes objetivos:
 
 ------------------------------------------------------------------------
 
-#### Entrega: 
+### Datos de entrada en esta práctica:
+- Capas utilizadas y generadas en las prácticas anteriores de esta misma asignatura. 
+
+### Software para el desarrollo de esta práctica:
+- QGIS.
+
+### Entrega: 
 
 Esta práctica NO tiene ningún entregable por parte del estudiante, solo se desarrollará durante el tiempo de clase para que el estudiante pueda aprender y afianzar conocimientos.  
 
@@ -47,32 +53,28 @@ Esta práctica NO tiene ningún entregable por parte del estudiante, solo se des
 
 ### Introducción: Publicar mapas en la web
 <a name="inicio"></a>
-Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
+
+- Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
 rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
 existen algunas herramientas que podemos usar para hacer mapas interactivos de una manera fácil.
 ![WEBMAPPING_diagram](https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/WEBMAPPING_diagram.JPG)
-¿Qué es qgis2web?
+
+- ¿Qué es qgis2web?
 qgis2web es una herramienta que exporta proyectos QGIS a mapas web OpenLayers o Leaflet (crea automáticamente los archivos HTML, Javascript y CSS).El origen de este complemento está en los complementos qgis2leaf 
 existentes, desarrollados por Tom Chadwin, Riccardo Klinger, Victor Olaya, Nyall Dawson (https://github.com/tomchadwin/qgis2web/wiki).
-¿Cómo funciona qgis2web?
+
+- ¿Cómo funciona qgis2web?
 qgis2web crea un mapa web basado en OpenLayers o Leaflet de todas las capas existentes en un proyecto QGIS. La herramienta convierte capas vectoriales a GeoJSON y crea una estructura de carpetas con un archivo 
 index.html que contiene el mapa web. El complemento también puede exportar la simbología definida por QGIS de puntos, líneas y polígonos e incluye un control de visibilidad de capa y varios otros controles.
 <p align="center">
 <img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/qgis2web.JPG" alt="Figura 2" style="zoom:0%;"/><a name="figura2"></a><br><br>**Figura WebMapping QGIS2WEB**
 </p>
-En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia
-y funcionalidades del mapa para mostrar capas de diferentes formatos (pueden ser: KMZ, geojson, shp, CAD, WMS). 
-Para realizar este tipo de mapas interactivos existen diferentes aplicaciones online donde podemos ir codificando y visualizando al mismo tiempo, sin necesidad de tener el mapa guardado localmente. Las Aplication Programming interface 
 
-## Datos de entrada en esta práctica:
-- Capas utilizadas y generadas en las prácticas anteriores de esta misma asignatura. 
+- En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia y funcionalidades del mapa para mostrar capas de diferentes formatos (pueden ser: KMZ, geojson, shp, CAD, WMS). Para realizar este tipo de mapas interactivos existen diferentes aplicaciones online donde podemos ir codificando y visualizando al mismo tiempo, sin necesidad de tener el mapa guardado localmente. Las Aplication Programming interface 
 
-## Software para el desarrollo de esta práctica:
-- QGIS.
+## Desarrollo de la práctica:
 
-### Desarrollo de la práctica:
-
-## Instalación del complemento QGIS2WEB 
+### Instalación del complemento QGIS2WEB 
 
 1. Abra un nuevo proyecto de QGIS.
 
@@ -86,14 +88,14 @@ Para realizar este tipo de mapas interactivos existen diferentes aplicaciones on
 <img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/Install_qgis2web00B.JPG" alt="Figura 4" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 4**
 </p>
 
-## Crear una aplicación de WebMapping
+### Crear una aplicación de WebMapping
 4. Prepara en tu visior todas las capas que utilizarás, estableciendo la simbología y diseño de apariencia para las mismas. 
-- Puede mejorar su proyecto, estableciendo un título, colores de fondo o resaltado en PROYECTO --> PROPIEDADES.
-- De nombres amigables en el panel de CAPAS
-- Asigne a las columnas de las tablas de atributos nombres amigables desde CAPA --> PROPIEDADES --> pestaña FORMULARIO DE ATRIBUTOS en el apartado de ALIAS
-- Si hay columnas de la tabla de atributos que no quieres que se muestren en la ventana emergente, puede establecer en TIPO DE CONTROL como "OCULTO".
-- Si alguno de los campos contiene nombres de archivos de imágenes, cambia en la ventana de edicion a "FOTO" para que las imágenes aparezcan en ventanas emergentes. 
-- También se puede configurar la visibilidad de las capas dependiendo de la escala desde la pestaña de las propiedades de capa llamada REPRESENTACIÓN activando "VISIBILIDAD DEPENDIENTE DE LA ESCALA" y estableciendo 
+ - Puede mejorar su proyecto, estableciendo un título, colores de fondo o resaltado en PROYECTO --> PROPIEDADES.
+ - De nombres amigables en el panel de CAPAS
+ - Asigne a las columnas de las tablas de atributos nombres amigables desde CAPA --> PROPIEDADES --> pestaña FORMULARIO DE ATRIBUTOS en el apartado de ALIAS
+ - Si hay columnas de la tabla de atributos que no quieres que se muestren en la ventana emergente, puede establecer en TIPO DE CONTROL como "OCULTO".
+ - Si alguno de los campos contiene nombres de archivos de imágenes, cambia en la ventana de edicion a "FOTO" para que las imágenes aparezcan en ventanas emergentes. 
+ - También se puede configurar la visibilidad de las capas dependiendo de la escala desde la pestaña de las propiedades de capa llamada REPRESENTACIÓN activando "VISIBILIDAD DEPENDIENTE DE LA ESCALA" y estableciendo 
 los valores mínimo y máximo. 
 
 5. Cuando el mapa y las capas estén listas, entonces es hora de abrir la aplicación de mapas web utilizando el complemento QGIS2WEB. Para ello, inicie la herramienta QGIS2WEB, en una de las siguientes opciones que 
