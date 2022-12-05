@@ -29,7 +29,7 @@ Esta práctica tiene los siguientes objetivos:
 + Utilice el material como se lo indica el profesor
 + Al finalizar el ejercicio participe en la socialización de las diferentes respuestas expuestas.   
 
-#### Materiales facilitados para la realización de la práctica:
+## Materiales facilitados para la realización de la práctica:
 
 | DESCRIPCIÓN               | NOMBRE Y LOCALIZACION                       |
 |---------------------------------|---------------------------------------|
@@ -39,13 +39,13 @@ Esta práctica tiene los siguientes objetivos:
 
 ------------------------------------------------------------------------
 
-#### Entrega: 
+## Entrega: 
 
 Esta práctica NO tiene ningún entregable por parte del estudiante, solo se desarrollará durante el tiempo de clase para que el estudiante pueda aprender y afianzar conocimientos.  
 
 ------------------------------------------------------------------------
 
-### Introducción: Publicar mapas en la web
+## Introducción: Publicar mapas en la web
 <a name="inicio"></a>
 Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
 rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
@@ -116,47 +116,22 @@ de QGIS no se pueden reproduciry muchos solo son posibles en OpenLayers o Leafle
 de la salida para lograr lo que WGIS2WEB no puede. 
 
 
-7. Para ver el diseño y modificaciones de las distintas opciones, presione el botón "UPDATE PREVIEW". Recuerde que cada vez que modifique o configure un parámetro, debe hacer click en este botón para ver el resultado. Entre las pestañas que presenta esta ventana están:
+7. Para ver el diseño y modificaciones de las distintas opciones, presione el botón "UPDATE PREVIEW". Recuerde que cada vez que modifique o configure un parámetro, debe hacer click en este botón para ver el resultado. 
+- Opciones de capa: 
 
-- Opciones de capas y grupos - LAYERS AND GROUPS: Controla cómo se mostrará una capa en el mapa.
-  + Visible - Selecciona si la capa será visible al cargar el mapa (o la capa aparecerá inicialmente desactivada en la visualización). 
-  + Popups - Especifique si una capa muestra o no una ventana emergente haciendo click, o si no despliega nada al hacer click sobre el contenido. 
-  + Cluster - Caracteriza los puntos de una agrupación.
-  + Popup fields - Especifica como quiere que se vea cada archivo etiquetado en los popups.
+8. Entre las pestañas encontramos:
+ a) LAYERS AND GROUPS: Controla cómo se mostrará una capa en el mapa, incluida la opción de campos emergentes, o emergente con un click:
+  - Visible - Selecciona si la capa será visible al cargar el mapa (aparecerá la capa desactiva en la visualización). Esto solo determina la visibilidad: la capa se cargará independientemente de esta configuración, 
+  aunque aparecerá desactivdad. 
+ Popups - Especifique si una capa muestra o no una ventana emergente haciendo click, o si no despliega nada al hacer click sobre el contenido. 
+ Cluster - Caracteriza los puntos de una agrupación
+ Popup fields - Especifica como quiere que se vea cada archivo etiquetado en los popups
 
-- Opciones de apariencia - APPEARANCE:
-  APPEARANCE
-  + Add abstract: Esto mostrará (en caso de que lo tenga) el resumen de los metadatos del proyecto al mapa web como un cuadro de información.
-  + Add address search: Añadirá la herramienta de búsqueda de ubicaciones (código geográfico).
-  + Add layers list: Añadirá un cuadro con la lista de las capas disponibles con su leyenda y botón de activar/desactivar visualización.
-  + Attribute filter: Se enumeran todos los campos admitidos de todas las capas. Los atributos seleccionados serán utilizados para filtrar el mapa web y todas las capas qeu contienen el atributo con el mismo nombre.
-  + Geolocate user: Mostrar la ubicación del usuario en el mapa.
-  + Highlight on hover: Resalta el objeto al pasar el mouse por el mapa.
-  + Layer search: Agrega la opción para buscar valores de campo de la capa. 
-  + Match project CRS: Cree un mapa web en la misma proyección que el proyecto de QGIS (de lo contrario, el mapa web se proyecta en EPGS: 8357 por defecto).
-  + Measure tool: Añadirá un icono que permite realizar mediciones sobre el mapa.
-  + Show popups on hover: Muestra ventanas emergentes cuando el mouse se desplaza sobre las funciones.
-  + Template: Seleccione la plantilla HTML para el mapa web: agregue sus propias plantillas al directorio /qgis2web/templates en su carpeta de .qgis2
-  + Widget Background: Da color de fondo a los botones insertados en el visor.
-  + Widget Icon: Da color al botón insertado en el visor.
-  SCALE/ZOOM: 
-  + Extent (escala): Haga coincidir la vista actual del QGIS o muestre todo el contenido de todas las capas (solo GeoJSON local y rasters, no WFS/WMS).
-  + Max zoom level: Hasta dónde se acercará el mapa.
-  + Min zoom level: Hasta dónde se alejará el mapa.
-  + Restrict to extent: Evitar o no la panorámica o el zoom más allá de la extensión seleccionada.
-
-- Opciones de exportación - EXPORT: 
-  + Exporter: "Export to folder" para guardar nuestro mapa web en una carpeta, o "Export to FTP site" si desea utilizar una copia local de OL3/Leaflet, o llamar a la biblioteca desde su CDN.
-  + Minify GeoJSON files: Elimine los espacios en blanco innecesarios de GeoJSON exportado para reducir el tamaño del archivo.
-  + Precision: Simplifique la geometría para reducir el tamaño del archivo.  
-
-- Ajustes - SETTINGS: 
-  + Vista previa al inicio
-  + Retroalimentación cercana sobre el éxito.
-  + Vista previa del límite de características por capa. 
-
-- Ayuda - HELP: Se muestra toda la información sobre el manejo de este pluguin.
-
+ b) APPEARANCE: Donde podemos agregar algunas herramientas al mapa web como: búsqueda de direcciones, lista de capas, herramientas de medición, ventana emergente, geologcalización de usuarios. En este apartado también 
+ podemos definir la extensión del mapa. 
+ c) EXPORT: Esta parte brinda algunas opciones para exportar el mapa a un mapa web como: ubicación de los archivos de mapa web exportados, ubicación de la biblioteca de mapas, extracción del archivo GeoJSON, etc.
+ d) SETTINGS:
+ e) HELP:  
 
 
 
