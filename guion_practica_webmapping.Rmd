@@ -54,7 +54,7 @@ Webmapping se refiere la publicación de mapas dinámicos en la web, a diferenci
 rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
 existen algunas herramientas que podemos usar para hacer mapas interactivos de una manera fácil.
 <p align="center">
-<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/Elementos_pinar.jpg?raw=true" alt="Figura 1" style="zoom:30%;"/><a name="figura1"></a><br><br> **Figura 1**
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/WEBMAPPING_diagram.JPG" alt="Figura 1" style="zoom:30%;"/><a name="figura1"></a><br><br> **Figura 1**
 </p>
 
 ¿Qué es qgis2web?
@@ -64,9 +64,8 @@ existentes, desarrollados por Tom Chadwin, Riccardo Klinger, Victor Olaya, Nyall
 qgis2web crea un mapa web basado en OpenLayers o Leaflet de todas las capas existentes en un proyecto QGIS. La herramienta convierte capas vectoriales a GeoJSON y crea una estructura de carpetas con un archivo 
 index.html que contiene el mapa web. El complemento también puede exportar la simbología definida por QGIS de puntos, líneas y polígonos e incluye un control de visibilidad de capa y varios otros controles.
 <p align="center">
-<img src="https://github.com/RuizGomezFJ/GEOFOREST_SIG2/blob/main/Imagenes/cargar_csv.jpg?raw=true" alt="Figura 2" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 2**
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/qgis2web.JPG" alt="Figura 2" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 2**
 </p>
-
 
 En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia
 y funcionalidades del mapa para mostrar capas de diferentes formatos (pueden ser: KMZ, geojson, shp, CAD, WMS). 
@@ -82,16 +81,25 @@ Para realizar este tipo de mapas interactivos existen diferentes aplicaciones on
 ## Instalación del complemento QGIS2WEB 
 1. Abra un nuevo proyecto de QGIS
 2. Vaya a la barra de menú  superior y haga click en: COMPLEMENTOS --> ADMINISTRAR E INSTALAR COMPLEMENTOS...
-IMAG
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/Install_qgis2web00A.JPG" alt="Figura 3" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 3**
+</p>
 3. En la ventana de diálogo busque: "QGIS2WEB".  Seleciónelo y haga click en "INSTALAR COMPLEMENTO".
-IMAG
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/Install_qgis2web00B.JPG" alt="Figura 4" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 4**
+</p>
 
 ## Crear una aplicación de WebMapping
 4. Prepara en tu visior todas las capas que utilizarás, estableciendo la simbología y diseño de apariencia para las mismas. 
 5. Cuando el mapa esté listo, entonces es hora de abrir la aplicación de mapas web utilizando el complemento QGIS2WEB. Para ello, inicie la herramienta QGIS2WEB, en una de las siguientes opciones que se muestran:
-IMAG
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/Install_qgis2web03.JPG" alt="Figura 5" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 5**
+</p>
 6. En la ventana de diálogo es posible establecer algunos parámetros para para la muestra web de información cargada en QGIS. 
-IMAG
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/Install_qgis2web04.JPG.JPG" alt="Figura 6" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 6**
+</p>
+
 7. Para ver el diseño y modificaciones de las distintas opciones, presione el botón "UPDATE PREVIEW". Recuerde que cada vez que modifique o configure un parámetro, debe hacer click en este botón para ver el resultado. 
 8. Entre las pestañas, hay una exclusiva para la exportación 
 
