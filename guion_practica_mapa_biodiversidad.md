@@ -50,9 +50,8 @@ Esta práctica NO tiene ningún entregable por parte del estudiante, solo se des
 Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
 rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
 existen algunas herramientas que podemos usar para hacer mapas interactivos de una manera fácil.
-<p align="center">
-<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/WEBMAPPING_diagram.JPG" alt="Figura 1" style="zoom:-20%;"/><a name="figura1"></a><br><br> **Figura 1**
-</p>
+
+![comunidades](https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/WEBMAPPING_diagram.JPG)
 
 ¿Qué es qgis2web?
 qgis2web es una herramienta que exporta proyectos QGIS a mapas web OpenLayers o Leaflet (crea automáticamente los archivos HTML, Javascript y CSS).El origen de este complemento está en los complementos qgis2leaf 
@@ -61,7 +60,7 @@ existentes, desarrollados por Tom Chadwin, Riccardo Klinger, Victor Olaya, Nyall
 qgis2web crea un mapa web basado en OpenLayers o Leaflet de todas las capas existentes en un proyecto QGIS. La herramienta convierte capas vectoriales a GeoJSON y crea una estructura de carpetas con un archivo 
 index.html que contiene el mapa web. El complemento también puede exportar la simbología definida por QGIS de puntos, líneas y polígonos e incluye un control de visibilidad de capa y varios otros controles.
 <p align="center">
-<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/qgis2web.JPG" alt="Figura 2" style="zoom:0%;"/><a name="figura2"></a><br><br> **Figura 2**
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/qgis2web.JPG" alt="Figura 2" style="zoom:0%;"/><a name="figura2"></a><br><br>**Figura 2**
 </p>
 
 En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia
