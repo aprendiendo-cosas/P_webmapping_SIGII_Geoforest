@@ -8,14 +8,6 @@
 
 
 
-
-- Contar la historia usando las cuadrículas de 250 m.
-- Pedir en el ejercicio que usen el mapa de vegetación. poner enlace al mapa. descargar el de la zona de estudio.
-- Incorporar el caso de la biodiversidad gamma como "material avanzado"
-  - lo que hay en la carpeta preparacion de este repo
-  - A_escalas_shannon_Andalucia_ecologia_ccaa
-  - 3_geoforest_shanon_escalas (Prezi)
-
 ## Objetivos
 
 Esta práctica tiene los siguientes objetivos:
@@ -28,7 +20,7 @@ Esta práctica tiene los siguientes objetivos:
   + Aprender a utilizar una aplicación de cartografía Web que permita interpretar el análisis de información ambiental y forestal de una zona determinada.
   + Aprender y conocer el proceso de publicación de datos geoespaciales a través de servidores web.
   
-## Instrucciones
+## Instrucciones para la práctica
 
 + Lea atentamente toda la guía.
 + Verifique que cuenta con los elementos de hardware, software, red e inputs necesarios.
@@ -36,6 +28,54 @@ Esta práctica tiene los siguientes objetivos:
 + Asegúrese de descargar la información necesaria para el desarrollo de esta prácitca.
 + Utilice el material como se lo indica el profesor
 + Al finalizar el ejercicio participe en la socialización de las diferentes respuestas expuestas.   
+
+#### Materiales facilitados para la realización de la práctica:
+
+| DESCRIPCIÓN               | NOMBRE Y LOCALIZACION                       |
+|---------------------------------|---------------------------------------|
+| Guión de la práctica      | UDII_P_GUIA_WEBMAPPING.pdf / Moodle         |
+| Datos suministrados       | Data_mapping.rar / Moodle                   |
+| Datos disponibles On-Line | Varios / Revisar Material suplementario     |
+
+------------------------------------------------------------------------
+
+#### Entrega: 
+
+Esta práctica NO tiene ningún entregable por parte del estudiante, solo se desarrollará durante el tiempo de clase para que el estudiante pueda aprender y afianzar conocimientos.  
+
+------------------------------------------------------------------------
+
+### Introducción: Publicar mapas en la web
+<a name="inicio"></a>
+Webmapping se refiere la publicación de mapas dinámicos en la web, a diferencia de los mapas estáticos (por ejemplo, un PDF). Los mapas web tienen la ventaja de poder llegar a un público más amplio con mayor 
+rapidez. Solo tienes que facilitar una URL de tu mapa online, para que otro usuario pueda consultarla. Aunque el mapeo web está estrechamente relacionado con la programación y tiene una curva de aprendizaje, 
+existen algunas herramientas que podemos usar para hacer mapas interactivos de una manera fácil.
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/WEBMAPPING_diagram.JPG" alt="Figura 1" style="zoom:30%;"/><a name="figura1"></a><br><br> **Figura 1**
+</p>
+
+¿Qué es qgis2web?
+qgis2web es una herramienta que exporta proyectos QGIS a mapas web OpenLayers o Leaflet (crea automáticamente los archivos HTML, Javascript y CSS).El origen de este complemento está en los complementos qgis2leaf 
+existentes, desarrollados por Tom Chadwin, Riccardo Klinger, Victor Olaya, Nyall Dawson (https://github.com/tomchadwin/qgis2web/wiki).
+¿Cómo funciona qgis2web?
+qgis2web crea un mapa web basado en OpenLayers o Leaflet de todas las capas existentes en un proyecto QGIS. La herramienta convierte capas vectoriales a GeoJSON y crea una estructura de carpetas con un archivo 
+index.html que contiene el mapa web. El complemento también puede exportar la simbología definida por QGIS de puntos, líneas y polígonos e incluye un control de visibilidad de capa y varios otros controles.
+<p align="center">
+<img src="https://github.com/aprendiendo-cosas/P_webmapping_SIGII_Geoforest/blob/main/images/qgis2web.JPG" alt="Figura 2" style="zoom:60%;"/><a name="figura2"></a><br><br> **Figura 2**
+</p>
+
+En esta práctica desarrollaremos un mapa web, es decir, como proceso de diseñar, aplicar, generar y visualizar datos geoespaciales, así como poder interactuar con ellos. Para ello codificaremos una estructura, apariencia
+y funcionalidades del mapa para mostrar capas de diferentes formatos (pueden ser: KMZ, geojson, shp, CAD, WMS). 
+Para realizar este tipo de mapas interactivos existen diferentes aplicaciones online donde podemos ir codificando y visualizando al mismo tiempo, sin necesidad de tener el mapa guardado localmente. Las Aplication Programming interface 
+
+## Datos de entrada en esta práctica:
+- Capas utilizadas y generadas en las prácticas anteriores de esta misma asignatura. 
+
+## Software para el desarrollo de esta práctica:
+- QGIS.
+
+### Desarrollo de la práctica:
+
 
 
 ## Contextualización ecológica y estructura de la sesión
